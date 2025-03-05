@@ -1,0 +1,816 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: crimson;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    background: white;
+}
+
+.max-width
+{
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 80px;
+}
+/* navbar styling */
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+
+    font-family: 'ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+background: crimson;
+
+}
+.navbar .max-width
+{
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.navbar .logo a {
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .menu li {
+   list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    color: white;
+font-size: 18px;
+font-weight: 500;
+margin-left: 25px;
+    transition: color 0.5s
+}
+.navbar .logo a span{
+    color: crimson;
+}
+.navbar .menu li a:hover{
+    color: white;
+}
+/* menu btn styling */
+.menu-btn{
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.menu-btn i{
+    background: white;
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    transition: 0.5s;
+}
+
+
+/*home section style*/
+
+.home{
+    background-color: #000000;
+    display: flex;
+    height: 100vh;
+    color: white;
+    min-height: 500px;
+    font-family: 'ubuntu', sans-serif;
+
+}
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+  margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    color: crimson;
+    font-weight: 500;
+}
+
+
+.home .home-content a{
+    display: inline-block;
+    background: crimson;
+    color: white;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 7%;
+    margin-left: -45%;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+
+}
+.home .home-content a:hover{
+    color: crimson;
+    background: none;
+}
+
+/*about section styling*/
+/* تحسين المسافات للسكشن */
+section {
+    padding: 80px 0;
+}
+
+/* تحسين تنسيق قسم "About Me" */
+.about {
+    font-family: 'Poppins', sans-serif;
+    background: #d0d0d0;
+    padding: 60px 0;
+}
+
+/* تنسيق العنوان */
+.about .title {
+    position: relative;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* تحسين الخط السفلي تحت العنوان */
+.about .title::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 150px;
+    height: 3px;
+    background: black;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* تحسين النص الصغير تحت العنوان */
+.about .title::after {
+    content: 'Who I Am';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 18px;
+    color: crimson;
+    font-weight: bold;
+    background: #000000;
+    padding: 0 10px;
+    transform: translateX(-50%);
+}
+
+/* تحسين تخطيط المحتوى */
+.about .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* تنسيق الصورة */
+.about .about-content .left {
+    width: 45%;
+}
+
+.about .about-content .left img {
+    height: 650px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* تنسيق النص */
+.about .about-content .right {
+    width: 50%;
+}
+
+.about .about-content .right .text {
+    font-size: 24px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.about .about-content .right .text span {
+    color: #f00;
+}
+
+/* تحسين النصوص وتباعدها */
+.about .about-content .right p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* تحسين زر تحميل السيرة الذاتية */
+.about .about-content .right a.nova-button {
+
+    color: red;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 20px;
+    border-radius: 6px;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+    text-decoration: underline;
+
+}
+
+.about .about-content .right a.cv-button{
+    color: crimson;
+
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 20px;
+    border-radius: 6px;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 2px solid crimson;
+    padding: 12px 36px;
+    background: black;
+
+
+}
+
+.about .about-content .right a.nova-button:hover {
+    color: crimson;
+    background: none;
+    box-shadow: 1px 3px 10px rgba(220, 20, 60, 0.4);
+}
+section {
+    padding: 5px 0;
+}
+
+
+
+/* تحسين تنسيق قسم "services " */
+
+.services {
+    font-family: 'Poppins', sans-serif;
+    background: #87ceeb;
+    padding: 60px 0;
+}
+
+/* تنسيق العنوان */
+.services .title {
+    position: relative;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* تحسين الخط السفلي تحت العنوان */
+.services .title::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 150px;
+    height: 3px;
+    background: black;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* تحسين النص الصغير تحت العنوان */
+.services .title::after {
+    content: 'Who I Am';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 18px;
+    color: crimson;
+    font-weight: bold;
+    background: #000000;
+    padding: 0 10px;
+    transform: translateX(-50%);
+}
+
+/* تحسين تخطيط المحتوى */
+.services .service-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* تنسيق الصورة */
+.services .service-content .left {
+    width: 45%;
+}
+
+.services .service-content .left img {
+    height: 650px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* تنسيق النص */
+/* تحسين تخطيط البوكسات */
+.services .service-content .right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* مسافة بين كل بوكس */
+}
+
+/* تنسيق كل بوكس خدمة */
+.services .service-content .right .card,
+.services .service-content .right .card2,
+.services .service-content .right .card3 {
+    background: #ffffff; /* لون الخلفية */
+    padding: 20px; /* المسافة الداخلية */
+    border-radius: 8px; /* زوايا دائرية */
+    box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.1); /* تأثير الظل */
+    text-align: center; /* توسيط النص */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* تأثير عند التحويم */
+}
+
+/* تحسين التأثير عند التحويم */
+.services .service-content .right .card:hover,
+.services .service-content .right .card2:hover,
+.services .service-content .right .card3:hover {
+    transform: translateY(-5px); /* رفع البوكس عند التحويم */
+    box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.2); /* ظل أقوى */
+}
+
+/* تنسيق عنوان الخدمة */
+.services .service-content .right .card .text,
+.services .service-content .right .card2 .text,
+.services .service-content .right .card3 .text {
+    font-size: 22px;
+    font-weight: bold;
+    color: crimson;
+    margin-bottom: 10px;
+}
+
+/* تنسيق الفقرة */
+.services .service-content .right .card p,
+.services .service-content .right .card2 p,
+.services .service-content .right .card3 p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+}
+
+
+/* skills section styling */
+/* تحسين تنسيق قسم " skills" */
+.skills {
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+    padding: 60px 0;
+}
+
+/* تنسيق العنوان */
+.skills .title {
+    position: relative;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: #ff0000;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* تحسين الخط السفلي تحت العنوان */
+.skills .title::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 150px;
+    height: 3px;
+    background: black;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* تحسين النص الصغير تحت العنوان */
+    .skills .title::after{
+    content: 'MY SKILLS';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 18px;
+    color: crimson;
+    font-weight: bold;
+    background: #000000;
+    padding: 0 10px;
+    transform: translateX(-50%);
+}
+
+/* تنسيق الأعمدة */
+.skills .skills-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* تنسيق الأعمدة اليمنى واليسرى */
+.skills .column {
+    width: 48%; /* جعل العرض 48% بدلاً من 50% لتوفير المسافة */
+}
+
+/* تحسين النص داخل الأعمدة */
+.skills .column .text {
+    color: #000000;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+
+/* تنسيق شريط المهارات */
+.bars {
+    margin-top: 20px;
+}
+
+.bars .info {
+    display: flex;
+    justify-content: space-between;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.bars .progress-bar {
+    background-color: #D0d3d4;
+    border-radius: 10px;
+    height: 8px;
+    width: 100%;
+}
+
+.bars .progress {
+    background-color: #ff3333; /* لون الشريط */
+    border-radius: 10px;
+    height: 100%;
+}
+
+/*contact me styling*/
+.contact {
+    font-family: 'Poppins', sans-serif;
+    background: #808080; /* تغيير الخلفية إلى لون أفتح */
+    padding: 60px 0;
+    color: #333;
+}
+
+.contact .title {
+    position: relative;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase; /* جعل النص بأحرف كبيرة */
+}
+
+.contact .title::before {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 150px;
+    height: 3px;
+    background: linear-gradient(to right, #ff0000, #ff0000); /* تأثير التدرج اللوني */
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.contact .title::after {
+    content: 'Get In Touch';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 18px;
+    color: #ff0000;
+    font-weight: bold;
+    background: #000000;
+    padding: 0 10px;
+    transform: translateX(-50%);
+}
+
+.contact .contact-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap; /* لجعل الأعمدة تتكيف مع حجم الشاشة */
+}
+
+.contact .column {
+    width: 48%;
+    background: #d0d0d0; /* خلفية بيضاء للعمود */
+    padding: 20px;
+    border-radius: 10px; /* الزوايا المستديرة */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* تأثير الظل */
+}
+
+.contact .column .text {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.contact .icons .row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.contact .icons i {
+    font-size: 24px;
+    color: #ff6347; /* تغيير اللون إلى البرتقالي */
+    margin-right: 10px;
+}
+
+.contact .info .head {
+    font-weight: 600;
+    color: #333;
+}
+
+.contact .info .sub-title {
+    font-size: 16px;
+    color: #555;
+}
+
+.contact .field input, .contact .field textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.contact .field input:focus, .contact .field textarea:focus {
+    border-color: #ff6347; /* تغيير لون الحدود عند التركيز */
+}
+
+.contact .button button {
+    background: #ff6347;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.contact .button button:hover {
+    background-color: #ff4500; /* تأثير hover على الزر */
+}
+
+
+
+.this-is-me {
+    float: right;
+    margin-left: 0;
+    margin-top: -20%;
+}
+.text-1, .text-2, .text-3 {
+    float: left;
+}
+.text-2 {
+    margin-top: 1%;
+   margin-right:30%;
+}
+
+/*resposive media  query start*/
+@media (max-width: 1300px ) {
+    .home .max-width {
+        margin-left: 1px;
+    }
+
+    @media (max-width: 1104px ) {
+        .about .about-content .left img {
+            height: 350px;
+            width: 350px;
+
+        }
+
+        @media (max-width: 991px ) {
+            .max-width {
+                padding: 0 50px;
+
+
+            }
+
+            @media (max-width: 947px ) {
+
+                .menu-btn {
+                    display: block;
+                    z-index: 999;
+
+                }
+
+                .menu-btn i.active:before {
+                    content: "\f00d";
+                }
+
+            }
+            @media (max-width: 768px) {
+                .service-content {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .columns {
+                    width: 80%;
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+
+                .right {
+                    width: 80%;
+                }
+
+                .text {
+                    font-size: 20px;
+                }
+
+                .service-content p {
+                    font-size: 14px;
+                }
+            }
+
+            /* Media Query for extra small devices */
+            @media (max-width: 480px) {
+                .text {
+                    font-size: 18px;
+                }
+
+                .service-content p {
+                    font-size: 12px;
+                }
+
+                .columns img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+
+            .navbar .menu {
+                position: fixed;
+                height: 100vh;
+                width: 100%;
+                left: -100%;
+                top: 0;
+                background: #111;
+                text-align: center;
+                padding-top: 80px;
+                transition: all 0.3s ease;
+            }
+
+            .navbar .menu .active {
+                left: 0;
+
+            }
+
+            .navbar .menu li {
+                display: block;
+            }
+
+            .navbar .menu li a {
+                display: inline-block;
+                margin: 20px 0;
+                font-size: 25px;
+            }
+
+            .home .home-content .text-2 {
+                font-size: 70px;
+                margin-right: 0;
+            }
+
+            .home .home-content .text-3 {
+                font-size: 35px;
+            }
+
+            .home .home-content a {
+                font-size: 23px;
+                padding: 10px 30px;
+            }
+
+            .max-width {
+                max-width: 800px;
+            }
+
+            .about .about-content .column {
+                width: 100%;
+            }
+
+            .about .about-content .left {
+                display: flex;
+                justify-content: center;
+                margin: 0 auto 60px;
+
+            }
+
+            .about .about-content .right {
+                flex: 100%;
+
+            }
+
+        }
+        /* Media Queries for small devices */
+        @media (max-width: 768px) {
+            .contact .title {
+                font-size: 28px; /* تصغير حجم الخط */
+            }
+
+            .contact .contact-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact .column {
+                width: 90%; /* تقليص عرض الأعمدة */
+                margin-bottom: 20px;
+            }
+
+            .contact .field input, .contact .field textarea {
+                padding: 12px;
+                font-size: 14px; /* تقليص حجم النص في الحقول */
+            }
+
+            .contact .button button {
+                padding: 12px 25px; /* تصغير حجم الزر */
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact .title {
+                font-size: 24px; /* تصغير حجم الخط للأجهزة الصغيرة جدًا */
+            }
+
+            .contact .column {
+                width: 100%; /* جعل الأعمدة تأخذ كامل العرض */
+            }
+
+            .contact .button button {
+                padding: 10px 20px; /* تقليص حجم الزر للأجهزة الصغيرة */
+                font-size: 14px;
+            }
+
+
+            @media (max-width: 1300px) {
+                .max-width {
+                    padding: 0 23px;
+                }
+
+
+                .home .home-content .text-2 {
+                    font-size: 60px;
+                }
+
+                .home .home-content .text-3 {
+                    font-size: 32px;
+                }
+            }
+
+        }
+
+    }
+}
