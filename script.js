@@ -8,8 +8,12 @@ $(document).ready(function() {
     });
 // toggle menu/navbar script
     $('.menu-btn').click(function() {
-        $('.navbar .menu').toggleClass("active");
-        $('.menu-btn i').toggleClass("active");
+        var element = document.getElementById("mobile-menu");
+        if (element.style.visibility === "visible") {
+            element.style.visibility = "hidden";  // Hide the element
+        } else {
+            element.style.visibility = "visible"; // Show the element
+        }
     });
 
 });
