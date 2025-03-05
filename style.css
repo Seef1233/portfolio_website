@@ -57,7 +57,7 @@ margin-left: 25px;
     transition: color 0.5s
 }
 .navbar .logo a span{
-    color: crimson;
+    color: cornflowerblue;
 }
 .navbar .menu li a:hover{
     color: white;
